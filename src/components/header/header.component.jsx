@@ -19,7 +19,7 @@ const Header = ({ userData, userProfile, getAuthorizationCode, signOutSuccess, s
     }
     return code;
   }
-
+  
   useEffect(() => {
     if(location.search.length > 0){
       let code = getCode();
@@ -32,7 +32,7 @@ const Header = ({ userData, userProfile, getAuthorizationCode, signOutSuccess, s
     let url = process.env.REACT_APP_AUTH_API+'authorize';
     url += `?client_id=${process.env.REACT_APP_CLIENT_ID}`
     url += `&response_type=code`
-    url += `&redirect_uri=${encodeURI('http://localhost:3000')}`
+    url += `&redirect_uri=${encodeURI(process.env.REACT_APP_REDIRECT_URI)}`
     url += `&show_dialog=true`
     url += `&state=${process.env.REACT_APP_CLIENT_ID}`
     url += `&scope=user-read-private user-read-email`
