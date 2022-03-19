@@ -6,7 +6,7 @@ import './my-library.styles.scss';
 
 const MyLibrary = ({ userData, getFireBaseLibrary, removeFromLibrary, library }) => {
   useEffect(() => {
-    getFireBaseLibrary();
+    userData && getFireBaseLibrary();
   }, []); // passing an empty array as second argument triggers the callback in useEffect only after the initial render thus replicating `componentDidMount` lifecycle behaviour
 
   return (
