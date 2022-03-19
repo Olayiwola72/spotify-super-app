@@ -1,13 +1,13 @@
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { getFireBaseLibrary, removeFromLibrary } from '../../redux/user/user.actions';
 import { connect } from 'react-redux';
 
 import './my-library.styles.scss';
 
-const MyLibrary = ({ userData, getFireBaseLibrary, removeFromLibrary, library }) => {
-  useEffect(() => {
-    userData && getFireBaseLibrary();
-  }, []); // passing an empty array as second argument triggers the callback in useEffect only after the initial render thus replicating `componentDidMount` lifecycle behaviour
+const MyLibrary = ({ userData, removeFromLibrary, library }) => {
+  // useEffect(() => {
+  //   userData && getFireBaseLibrary();
+  // }, []); // passing an empty array as second argument triggers the callback in useEffect only after the initial render thus replicating `componentDidMount` lifecycle behaviour
 
   return (
     <div>
