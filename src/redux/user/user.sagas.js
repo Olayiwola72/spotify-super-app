@@ -26,7 +26,7 @@ export function* AuthWithSpotify(){
         data: qs.stringify({
             'grant_type':'authorization_code',
             'code': authorizationCode,
-            'redirect_uri': 'http://localhost:3000'
+            'redirect_uri': process.env.REACT_APP_REDIRECT_URI
         })
     }; 
 
