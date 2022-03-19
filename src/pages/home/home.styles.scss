@@ -1,0 +1,24 @@
+ 
+  @media (min-width: 1200px) {
+    .navbar-search {
+      width: 750px !important;
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .navbar-search {
+      width: 550px !important
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .navbar-search {
+      width: 350px !important
+    }
+  }
+  @media (width: 767px) {
+    .navbar-search {
+      margin-left: 50px;
+      padding-right: 125px;
+      max-width: 700px !important; 
+      width: 100%;
+    }
+  }
